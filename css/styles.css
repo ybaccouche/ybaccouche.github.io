@@ -1,3 +1,7 @@
+/* --rich-black: #0e131fff;
+--white-smoke: #f2f4f3ff;
+--celestial-blue: #20a4f3ff;
+--beaver: #a9927dff; */
 /* Define color palette */
 :root {
     --primary-color: #20a4f3ff;
@@ -7,11 +11,6 @@
     --text-color: #333;
     --white-color: #fcfcfc;
 }
-
-/* --rich-black: #0e131fff;
---white-smoke: #f2f4f3ff;
---celestial-blue: #20a4f3ff;
---beaver: #a9927dff; */
 
 /* General Styles */
 body {
@@ -25,6 +24,21 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    transition: margin-left 0.3s;
+}
+
+.toggle-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
 }
 
 .sidebar {
@@ -34,7 +48,12 @@ body {
     flex: 0 1 auto;
     width: auto;
     max-width: 220px;
-    /* adjust as needed */
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -240px;
+    transition: left 0.3s;
+    z-index: 999;
 }
 
 .sidebar ul {
@@ -52,23 +71,19 @@ body {
     font-weight: bold;
     display: block;
     padding: 5px;
-    /* Added padding for hover effect */
     border-radius: 4px;
-    /* Slightly round the corners */
     transition: color 0.3s, background-color 0.3s;
-    /* Smooth transition for hover effect */
 }
 
 .sidebar ul li a:hover {
     color: var(--text-color);
-    /* Switch to black */
     background-color: var(--accent-color);
-    /* Change background to accent color */
 }
 
 .content {
     flex: 1;
     padding: 20px;
+    margin-left: 0;
 }
 
 header {
@@ -136,18 +151,46 @@ footer {
     margin-top: 20px;
 }
 
+@media (max-width: 767px) {
+    .container {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        left: -100%;
+        width: 100%;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+}
+
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
     }
 
     .sidebar {
-        height: 100vh;
-        position: sticky;
-        top: 0;
-        width: auto;
-        /* adjust width based on content */
+        left: 0;
         max-width: 220px;
-        /* adjust as needed */
+    }
+
+    .content {
+        margin-left: 220px;
+    }
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.container.sidebar-active {
+    margin-left: 220px;
+}
+
+@media (max-width: 767px) {
+    .container.sidebar-active {
+        margin-left: 0;
     }
 }
