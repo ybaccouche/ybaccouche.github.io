@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <div class="container">
+        <nav class="sidebar">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#cv">CV</a></li>
@@ -18,39 +18,46 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="imgs/profile.jpg" alt="Profile Picture">
-        <p>Insert your bio here. You can talk about your background, interests, and professional experience.</p>
-    </section>
-    <section id="cv">
-        <h2>CV</h2>
-        <embed src="https://ryan-ott.github.io/CV/RyanOtt-CV.pdf" type="application/pdf" width="100%" height="600px">
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="projects.html#project1">Project 1</a></li>
-            <li><a href="projects.html#project2">Project 2</a></li>
-            <!-- Add more projects as needed -->
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+        <main class="content">
+            <header>
+                <h1>Ryan Ott</h1>
+                <img src="images/header.gif" alt="Header GIF" class="header-gif">
+            </header>
+            <section id="about">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <p>Insert your bio here. You can talk about your background, interests, and professional experience.</p>
+            </section>
+            <section id="cv">
+                <h2>CV</h2>
+                <embed src="https://ryan-ott.github.io/CV/RyanOtt-CV.pdf" type="application/pdf" width="100%"
+                    height="600px">
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="projects.html#project1">Project 1</a></li>
+                    <li><a href="projects.html#project2">Project 2</a></li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+            <footer>
+                <p>Date: <span id="currentDate"></span></p>
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
     <script src="js/scripts.js"></script>
 </body>
 
