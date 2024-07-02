@@ -50,6 +50,11 @@ body {
     color: var(--white-color);
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 5px;
+    /* Added padding for hover effect */
+    border-radius: 4px;
+    /* Slightly round the corners */
     transition: color 0.3s, background-color 0.3s;
     /* Smooth transition for hover effect */
 }
@@ -59,10 +64,6 @@ body {
     /* Switch to black */
     background-color: var(--accent-color);
     /* Change background to accent color */
-    padding: 3px;
-    /* Add padding for better visibility */
-    border-radius: 4px;
-    /* Slightly round the corners */
 }
 
 .content {
