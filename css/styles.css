@@ -42,8 +42,7 @@ body {
     padding: 20px;
     color: var(--white-color);
     flex: 0 1 auto;
-    width: auto;
-    max-width: 220px;
+    width: 220px;
     position: fixed;
     height: 100%;
     top: 0;
@@ -81,7 +80,7 @@ body {
 .content {
     flex: 1;
     padding: 20px;
-    margin: 0 auto;
+    margin: 20px auto;
     /* Center align the content */
     max-width: 800px;
     /* Stop expanding beyond this width */
@@ -89,6 +88,7 @@ body {
     /* Ensure padding doesn't overflow */
     box-sizing: border-box;
     /* Include padding in width calculation */
+    transition: margin-left 0.3s;
 }
 
 header {
@@ -107,6 +107,7 @@ header {
     /* Ensure padding doesn't overflow */
     box-sizing: border-box;
     /* Include padding in width calculation */
+    transition: margin-left 0.3s;
 }
 
 .header-gif {
@@ -132,6 +133,7 @@ section {
     /* Ensure padding doesn't overflow */
     box-sizing: border-box;
     /* Include padding in width calculation */
+    transition: margin-left 0.3s;
 }
 
 section a {
@@ -186,6 +188,7 @@ footer {
     /* Ensure padding doesn't overflow */
     box-sizing: border-box;
     /* Include padding in width calculation */
+    transition: margin-left 0.3s;
 }
 
 @media (max-width: 767px) {
@@ -194,8 +197,9 @@ footer {
     }
 
     .sidebar {
+        display: none;
         left: -100%;
-        width: 100%;
+        width: 95%;
     }
 
     .toggle-button {
@@ -215,14 +219,23 @@ footer {
     footer {
         max-width: 100%;
         /* Full width for mobile view */
-        margin: 0 10px;
-        /* Add side margins for mobile view */
+        margin: 20px 10px;
+        /* Add side margins for mobile view and restore vertical spacing */
+        width: calc(100% - 20px);
+        /* Ensure padding doesn't overflow */
+    }
+
+    .container.sidebar-active .sidebar {
+        display: block;
+        left: 0;
     }
 }
 
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
+        margin-left: 240px;
+        /* Move content to the right by the width of the sidebar */
     }
 
     .sidebar {
@@ -230,9 +243,12 @@ footer {
         max-width: 220px;
     }
 
-    .container.sidebar-active {
-        margin-left: 220px;
-        /* Ensure margin matches sidebar width */
+    .container.sidebar-active .content,
+    .container.sidebar-active header,
+    .container.sidebar-active section,
+    .container.sidebar-active footer {
+        margin-left: 240px;
+        /* Move content to the right by the width of the sidebar */
     }
 }
 

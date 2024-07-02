@@ -9,3 +9,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 });
 
 document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+
+// Hide sidebar on section click in mobile view
+document.querySelectorAll('.sidebar ul li a').forEach(link => {
+    link.addEventListener('click', function () {
+        if (window.innerWidth <= 767) {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.querySelector('.container').classList.remove('sidebar-active');
+        }
+    });
+});
