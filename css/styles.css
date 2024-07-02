@@ -50,6 +50,19 @@ body {
     color: var(--white-color);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.sidebar ul li a:hover {
+    color: var(--text-color);
+    /* Switch to black */
+    background-color: var(--accent-color);
+    /* Change background to accent color */
+    padding: 3px;
+    /* Add padding for better visibility */
+    border-radius: 4px;
+    /* Slightly round the corners */
 }
 
 .content {
