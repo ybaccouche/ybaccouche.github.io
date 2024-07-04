@@ -10,11 +10,23 @@
 
 /* General Styles */
 body {
-    font-family: 'Futura', sans-serif;
+    font-family: 'Georgia', serif;
+    /* Default font for main content */
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+/* Specific fonts for titles, headers, and sidebar items */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sidebar ul li a {
+    font-family: 'Tahoma', sans-serif;
 }
 
 .container {
@@ -35,6 +47,13 @@ body {
     cursor: pointer;
     font-size: 20px;
     z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the sidebar toggle button */
+.toggle-button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .sidebar {
@@ -175,6 +194,7 @@ form button {
 
 form button:hover {
     background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 footer {
