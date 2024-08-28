@@ -6,11 +6,17 @@
     --background-color: #f2f4f3ff;
     --text-color: #333;
     --white-color: #fcfcfc;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* or whatever font you're using */
+    --font-size: 16px;
+    /* or your default font size */
+    --font-weight: normal;
+    /* or your default font weight */
 }
 
 /* General Styles */
 body {
-    font-family: 'Georgia', serif;
+    font-family: var(--font-family);
     /* Default font for main content */
     margin: 0;
     padding: 0;
@@ -142,17 +148,17 @@ header {
 
 section {
     margin: 20px auto;
-    /* Center align the sections */
-    background-color: var(--white-color);
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 8px;
     max-width: 800px;
-    /* Stop expanding beyond this width */
     width: calc(100% - 40px);
-    /* Ensure padding doesn't overflow */
     box-sizing: border-box;
-    /* Include padding in width calculation */
     transition: margin-left 0.3s;
+}
+
+section h2 {
+    color: var(--text-color);
 }
 
 section a {
@@ -209,6 +215,81 @@ footer {
     box-sizing: border-box;
     /* Include padding in width calculation */
     transition: margin-left 0.3s;
+}
+
+/* Color Picker Styles */
+#colour-picker {
+    margin-bottom: 20px;
+}
+
+#colour-picker h2 {
+    margin-top: 0;
+}
+
+.colour-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.colour-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colour-option label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.colour-option input[type="color"] {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.colour-option input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.colour-option input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.colour-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.colour-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.colour-buttons button:first-child {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.colour-buttons button:last-child {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.colour-buttons button:hover {
+    opacity: 0.9;
 }
 
 @media (max-width: 767px) {
