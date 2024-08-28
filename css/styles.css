@@ -114,6 +114,8 @@ h6,
     box-sizing: border-box;
     /* Include padding in width calculation */
     transition: margin-left 0.3s;
+    min-height: 150vh;
+    /* Ensures there's always room to scroll */
 }
 
 header {
@@ -154,21 +156,38 @@ section {
     max-width: 800px;
     width: calc(100% - 40px);
     box-sizing: border-box;
-    transition: margin-left 0.3s;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+section.closed {
+    max-height: 60px;
+    /* Adjust this value based on your section title height */
+    padding: 10px 20px;
+}
+
+section.open {
+    max-height: 2000px;
+    /* Adjust this value based on your maximum section content height */
 }
 
 section h2 {
     color: var(--text-color);
+    margin: 0;
+    cursor: pointer;
 }
 
-section a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
+section .section-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
 }
 
-section a:hover {
-    color: var(--accent-color);
+section.open .section-content {
+    opacity: 1;
+    max-height: 2000px;
+    /* Should match the max-height of section.open */
 }
 
 form {
@@ -361,4 +380,12 @@ footer {
     .container.sidebar-active {
         margin-left: 0;
     }
+}
+
+#colour-picker.closed .section-content {
+    display: none;
+}
+
+#colour-picker.open .section-content {
+    display: block;
 }
