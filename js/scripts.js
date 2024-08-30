@@ -90,59 +90,26 @@ document.addEventListener('DOMContentLoaded', setupColourPicker);
 
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
-    let currentOpenSection = null;
+    const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
 
-    function closeSection(section) {
-        section.classList.remove('open');
-        section.classList.add('closed');
+    function toggleSection(section) {
+        section.classList.toggle('open');
     }
 
-    function openSection(section) {
-        if (currentOpenSection && currentOpenSection !== section) {
-            closeSection(currentOpenSection);
-        }
-        section.classList.remove('closed');
-        section.classList.add('open');
-        currentOpenSection = section;
-    }
+    sections.forEach(section => {
+        section.querySelector('h2').addEventListener('click', () => toggleSection(section));
+    });
 
-    function handleScroll() {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-
-        // Close all sections if we're at the very top
-        if (scrollPosition < windowHeight / 2) {
-            sections.forEach(closeSection);
-            currentOpenSection = null;
-            return;
-        }
-
-        // Find the section to open based on scroll position
-        let sectionToOpen = null;
-        for (let i = 0; i < sections.length; i++) {
-            const section = sections[i];
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop - windowHeight / 2 && scrollPosition < sectionBottom) {
-                sectionToOpen = section;
-                break;
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                sections.forEach(s => s.classList.remove('open'));
+                targetSection.classList.add('open');
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
-        }
-
-        // Open the appropriate section or close all if we're at the bottom
-        if (sectionToOpen) {
-            openSection(sectionToOpen);
-        } else if (scrollPosition + windowHeight >= documentHeight - 100) {
-            sections.forEach(closeSection);
-            currentOpenSection = null;
-        }
-    }
-
-    // Initially close all sections
-    sections.forEach(closeSection);
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call to set the initial state
+        });
+    });
 });
