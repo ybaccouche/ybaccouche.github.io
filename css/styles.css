@@ -119,12 +119,12 @@ footer {
 .linkedin-button {
     display: inline-flex;
     align-items: center;
-    padding: 8px 16px; /* Less padding for a more compact look */
+    padding: 4px 8px; /* Less padding for a more compact look */
     background-color: #0077b5; /* LinkedIn blue */
     color: white;
     text-decoration: none;
-    font-size: 0.95rem; /* Slightly smaller font for a sleek feel */
-    border-radius: 20px; /* Slightly rounded corners */
+    font-size: 0.6rem; /* Slightly smaller font for a sleek feel */
+    border-radius: 10px; /* Slightly rounded corners */
     transition: background-color 0.3s ease;
     font-weight: normal; /* Normal font-weight for a clean appearance */
 }
@@ -135,5 +135,5 @@ footer {
 
 .icon {
     margin-right: 6px; /* Small space between icon and text */
-    font-size: 1.3rem; /* Slightly larger icon */
+    font-size: 0.7 rem; /* Slightly larger icon */
 }
