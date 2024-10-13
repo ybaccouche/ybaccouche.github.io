@@ -1,6 +1,8 @@
 function showSection(sectionId) {
-    // Hide all content sections
+    // Get all content sections
     var sections = document.querySelectorAll('.content-section');
+
+    // Hide all sections
     sections.forEach(function(section) {
         section.classList.add('hidden');
     });
