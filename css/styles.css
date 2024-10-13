@@ -96,3 +96,24 @@ footer {
 .social-links a:hover {
     text-decoration: underline;
 }
+/* LinkedIn Button Styles */
+.linkedin-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background-color: #005983; /* Darker shade on hover */
+}
+
+.icon {
+    margin-right: 8px; /* Space between the icon and text */
+    font-size: 1.5rem; /* Adjust icon size */
+}
