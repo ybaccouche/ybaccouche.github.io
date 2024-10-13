@@ -47,7 +47,41 @@ p {
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
+/* General spacing around each section */
+.content {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+}
 
+/* CV section spacing */
+.cv-section {
+    margin-bottom: 40px;
+}
+
+/* Vision and AI Interests section styling */
+.vision-section, .interests-section {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* List styling for AI Interests */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
 /* Button Styling */
 button.year-button, button.toggle-button {
     background-color: #333;
