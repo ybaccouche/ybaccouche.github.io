@@ -1,7 +1,7 @@
 /* General Reset */
 /* Hidden class for toggling content sections */
 .hidden {
-    display: none; /* This hides the sections initially */
+    display: none;
 }
 
 .content-section {
@@ -58,6 +58,7 @@ p {
 .cv-section {
     margin-bottom: 40px;
 }
+
 
 /* Vision and AI Interests section styling */
 .vision-section, .interests-section {
@@ -160,10 +161,6 @@ footer {
     font-size: 0.7rem; /* Slightly larger icon */
 }
 
-/* Hidden content sections */
-.hidden {
-    display: none; /* This hides content sections initially */
-}
 
 .content-section {
     margin-top: 30px;
