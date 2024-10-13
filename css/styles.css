@@ -115,25 +115,25 @@ footer {
     font-size: 1.5rem; /* Adjust icon size */
 }
 
-/* LinkedIn Button Styles */
+/* LinkedIn Button - Minimal and Sleek */
 .linkedin-button {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Less padding for a more compact look */
     background-color: #0077b5; /* LinkedIn blue */
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    border-radius: 25px; /* Fully rounded corners for the box */
+    font-size: 0.95rem; /* Slightly smaller font for a sleek feel */
+    border-radius: 20px; /* Slightly rounded corners */
     transition: background-color 0.3s ease;
-    font-weight: bold; /* Make the text bold like in your picture */
+    font-weight: normal; /* Normal font-weight for a clean appearance */
 }
 
 .linkedin-button:hover {
-    background-color: #005983; /* Darker LinkedIn blue on hover */
+    background-color: #005983; /* Darker blue on hover */
 }
 
 .icon {
-    margin-right: 8px; /* Space between the icon and text */
-    font-size: 1.5rem; /* Icon size (slightly larger than text) */
+    margin-right: 6px; /* Small space between icon and text */
+    font-size: 1.3rem; /* Slightly larger icon */
 }
