@@ -3,46 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Portfolio - Youssef Baccouche</title>
+    <title>Youssef Baccouche - AI Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>AI Projects and CV</h1>
+            <h1>Youssef Baccouche 🚀</h1>
+            <p>Toggle Mode: 
+                <button class="toggle-button" onclick="showSection('cv-section')">CV</button>
+                <button class="toggle-button" onclick="showSection('projects-section')">Projects</button>
+                <button class="toggle-button" onclick="showSection('interests-section')">Interests</button>
+                <button class="toggle-button" onclick="showSection('github-section')">GitHub Page</button>
+                <button class="toggle-button" onclick="showSection('research-section')">Research Papers</button>
+            </p>
         </header>
 
-        <section class="cv-section">
-            <h2>My CV</h2>
-            <embed src="path-to-your-cv/YBCV.pdf" type="application/pdf" width="100%" height="600px">
-        </section>
+        <main>
+            <!-- CV Section (hidden by default) -->
+            <div id="cv-section" class="content-section hidden">
+                <h2>My CV</h2>
+                <embed src="assets/YBCV.pdf" type="application/pdf" width="100%" height="600px">
+            </div>
 
-        <section class="projects-section">
-            <h2>AI Projects</h2>
-            <ul>
-                <li>
-                    <h3>Project 1: Computer Vision Research</h3>
-                    <p>Description of project 1.</p>
-                </li>
-                <li>
-                    <h3>Project 2: AI Model for Predicting Trends</h3>
-                    <p>Description of project 2.</p>
-                </li>
-                <!-- Add more projects here -->
-            </ul>
-        </section>
+            <!-- Projects Section (hidden by default) -->
+            <div id="projects-section" class="content-section hidden">
+                <h2>AI Projects</h2>
+                <ul>
+                    <li>Project 1: Computer Vision Research</li>
+                    <li>Project 2: AI Model for Predicting Trends</li>
+                </ul>
+            </div>
 
-        <section class="github-link">
-            <h2>GitHub</h2>
-            <p>Check out more of my work on GitHub: 
-                <a href="https://github.com/your-github" target="_blank">My GitHub</a>
-            </p>
-        </section>
+            <!-- Interests Section (hidden by default) -->
+            <div id="interests-section" class="content-section hidden">
+                <h2>Interests</h2>
+                <p>Exploring the latest advancements in AI, deep learning, and natural language processing.</p>
+            </div>
+
+            <!-- GitHub Page Section (hidden by default) -->
+            <div id="github-section" class="content-section hidden">
+                <h2>GitHub Page</h2>
+                <p>Check out more of my work on GitHub: 
+                    <a href="https://github.com/your-github" target="_blank">My GitHub</a>
+                </p>
+            </div>
+
+            <!-- Research Papers Section (hidden by default) -->
+            <div id="research-section" class="content-section hidden">
+                <h2>Research Papers</h2>
+                <ul>
+                    <li><a href="#">Paper 1: AI in Computer Vision</a></li>
+                    <li><a href="#">Paper 2: Natural Language Processing for Trend Prediction</a></li>
+                </ul>
+            </div>
+
+            <!-- Feedback button (optional) -->
+            <div class="actions">
+                <button class="action-button">Give me anonymous feedback 🧑‍💻</button>
+            </div>
+        </main>
 
         <footer>
-            <p>&copy; 2024 Youssef Baccouche. All rights reserved.</p>
+            <p>Let's be friends:</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/youssef-baccouche-076a841a7/" class="linkedin-button">
+                    <span class="icon">💼</span> LinkedIn
+                </a>
+            </div>
         </footer>
     </div>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>

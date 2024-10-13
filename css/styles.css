@@ -1,107 +1,27 @@
-/* General Reset */
-/* Hidden class for toggling content sections */
+/* Hidden class for toggling visibility */
 .hidden {
-    display: none; /* This hides the sections initially */
+    display: none; /* Hides the content sections initially */
 }
 
 .content-section {
     margin-top: 30px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and Font Setup */
-body {
-    font-family: 'Inconsolata', monospace;
-    background-color: #1e1e1e;
-    color: #d0d0d0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-/* Container Setup */
-.container {
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
-}
-
-/* Header Styling */
-header {
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
 /* Button Styling */
-button.year-button, button.toggle-button {
+.toggle-button {
     background-color: #333;
     color: #d0d0d0;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
-    font-family: inherit;
 }
 
-button.year-button:hover, button.toggle-button:hover {
+.toggle-button:hover {
     background-color: #444;
 }
 
-button.action-button {
-    background-color: #444;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 10px;
-}
-
-button.action-button:hover {
-    background-color: #666;
-}
-
-/* Links */
-a {
-    color: #1abc9c;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    margin-top: 40px;
-}
-
-.social-links a {
-    color: #d0d0d0;
-    margin: 0 10px;
-    font-size: 1rem;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
+/* General styles (like LinkedIn button) and additional button styling */
 
 /* LinkedIn Button - Minimal and Sleek */
 .linkedin-button {
