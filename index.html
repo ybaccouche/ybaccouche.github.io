@@ -1,65 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youssef Baccouche</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <div class="container">
-        <nav class="sidebar">
+        <header class="main-header">
+            <h1>Simple Portfolio Website Template</h1>
+        </header>
+
+        <section class="profile">
+            <div class="profile-info">
+                <h2>Hi, I am Youssef Baccouche</h2>
+                <p class="subtitle">AI Engineer</p>
+                <p>5+ Years of Experience</p>
+                <p>Passionate about computer vision AI research and web development.</p>
+                <a href="#contact" class="btn-contact">Contact Me</a>
+            </div>
+            <div class="profile-image">
+                <img src="imgs/profile-pic.svg" alt="Profile Image">
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skill Sets</h2>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>Programming Languages & Technologies</li>
+                <li>AI & Machine Learning</li>
+                <li>Web Development</li>
+                <li>Database Management</li>
             </ul>
-        </nav>
-
-        <main class="content">
-            <header>
-                <h1>Youssef Baccouche</h1>
-            </header>
-
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I’m Youssef, passionate about computer vision AI research and tennis. With experience in the payments industry, I’m also building my web development skills.</p>
-            </section>
-
-            <section id="cv">
-                <h2>CV</h2>
-                <embed src="cv/YBCV.pdf" type="application/pdf" width="100%" height="500px">
-            </section>
-
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="projects.html#project1">Project 1</a></li>
-                    <li><a href="projects.html#project2">Project 2</a></li>
-                </ul>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <form id="contactForm">
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <textarea id="message" name="message" placeholder="Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-
-            <footer>
-                <p>&copy; 2024 Youssef Baccouche</p>
-            </footer>
-        </main>
+        </section>
     </div>
-    <script src="js/scripts.js"></script>
-</body>
 
+    <footer>
+        <p>&copy; 2024 Youssef Baccouche. All rights reserved.</p>
+    </footer>
+</body>
 </html>
