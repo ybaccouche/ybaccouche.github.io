@@ -3,32 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef Baccouche's Website</title>
+    <title>Youssef Baccouche</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="home-screen">
-        <div class="button-container">
-            <button class="category-button" onclick="goToSection('ai')">AI</button>
-            <button class="category-button" onclick="goToSection('tennis')">Tennis</button>
-            <button class="category-button" onclick="goToSection('mixing')">Mixing</button>
-            <button class="category-button" onclick="goToSection('travel')">Travel</button>
-        </div>
-    </div>
+    <div class="container">
+        <header>
+            <h1>Youssef Baccouche 🚀</h1>
+            <p>Time travel: 
+                <button class="year-button">2024</button>
+                <button class="year-button">2023</button>
+                <button class="year-button">2022</button>
+            </p>
+            <p>Toggle Mode: 
+                <button class="toggle-button">Real Mode</button>
+                <button class="toggle-button">Pretentious Mode</button>
+            </p>
+        </header>
 
-    <div id="ai-section" class="section hidden">
-        <h1>AI</h1>
-        <p>Content about AI and computer vision.</p>
-        <button class="back-button" onclick="goHome()">Back to Home</button>
-    </div>
+        <main>
+            <p>I'm Youssef, and like many, I have a goal I'm working towards. My goal is to achieve personal and financial independence.</p>
+            <p>I'm passionate about AI, tennis, and travel. While traveling the world, I aim to work efficiently and enjoy life to the fullest.</p>
+            <p>If you find this interesting, I can assure you that I'm just figuring it out along the way, learning from both success and failure.</p>
 
-    <div id="tennis-section" class="section hidden">
-        <h1>Tennis</h1>
-        <p>Details about tennis and my experiences.</p>
-        <button class="back-button" onclick="goHome()">Back to Home</button>
-    </div>
+            <p>Goals for 2024: <a href="#goals">2024 Goals 🎯</a></p>
 
-    <!-- Similar sections for Mixing and Travel -->
+            <p>(Revenue: $50K/month)</p>
+
+            <div class="actions">
+                <button class="action-button">Let’s have a zoom coffee ☕</button>
+                <button class="action-button">Give me anonymous feedback 🧑‍💻</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Let's be friends:</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Podcast</a>
+                <a href="#">Instagram</a>
+            </div>
+        </footer>
+    </div>
 
     <script src="js/scripts.js"></script>
 </body>
