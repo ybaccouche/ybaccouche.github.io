@@ -1,4 +1,13 @@
 /* General Reset */
+/* Hidden class for toggling content sections */
+.hidden {
+    display: none; /* This hides the sections initially */
+}
+
+.content-section {
+    margin-top: 30px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -94,7 +103,6 @@ footer {
     text-decoration: underline;
 }
 
-
 /* LinkedIn Button - Minimal and Sleek */
 .linkedin-button {
     display: inline-flex;
@@ -115,5 +123,14 @@ footer {
 
 .icon {
     margin-right: 6px; /* Small space between icon and text */
-    font-size: 0.7 rem; /* Slightly larger icon */
+    font-size: 0.7rem; /* Slightly larger icon */
+}
+
+/* Hidden content sections */
+.hidden {
+    display: none; /* This hides content sections initially */
+}
+
+.content-section {
+    margin-top: 30px;
 }

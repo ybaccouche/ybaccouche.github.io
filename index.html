@@ -12,21 +12,48 @@
         <header>
             <h1>Youssef Baccouche 🚀</h1>
             <p>Toggle Mode: 
-                <button class="toggle-button">General</button>
-                <button class="toggle-button">AI</button>
-                <button class="toggle-button">Tennis</button>
-                <button class="toggle-button">Music</button>
-                <button class="toggle-button">Travel</button>
+                <button class="toggle-button" onclick="showSection('general-section')">General</button>
+                <button class="toggle-button" onclick="showSection('ai-section')">AI</button>
+                <button class="toggle-button" onclick="showSection('tennis-section')">Tennis</button>
+                <button class="toggle-button" onclick="showSection('music-section')">Music</button>
+                <button class="toggle-button" onclick="showSection('travel-section')">Travel</button>
             </p>
         </header>
 
         <main>
-            <p>I'm Youssef, and this is a small insight into a some of my passions and interests.</p>
-            <p>Alongside many interests that come and go, these tend to stick around the most: AI, sports, music and travel.</p>
-            <p>If you find this interesting, I can assure you that I'm just figuring it out along the way, learning from both success and failure.</p>
+            <!-- General Content Section -->
+            <div id="general-section" class="content-section">
+                <p>I'm Youssef, and this is a small insight into some of my passions and interests.</p>
+                <p>These are: AI, sports, music, and travel.</p>
+            </div>
 
-            <p>Goals for 2024: <a href="#goals">2024 Goals 🎯</a></p>
+            <!-- AI Content Section (hidden by default) -->
+            <div id="ai-section" class="content-section hidden">
+                <h2>AI Portfolio</h2>
+                <section class="cv-section">
+                    <h3>My CV</h3>
+                    <embed src="path-to-your-cv/YBCV.pdf" type="application/pdf" width="100%" height="600px">
+                </section>
 
+                <section class="projects-section">
+                    <h3>AI Projects</h3>
+                    <ul>
+                        <li>Project 1: Computer Vision Research</li>
+                        <li>Project 2: AI Model for Predicting Trends</li>
+                    </ul>
+                </section>
+
+                <section class="github-link">
+                    <h3>GitHub</h3>
+                    <p>Check out more of my work on GitHub: 
+                        <a href="https://github.com/your-github" target="_blank">My GitHub</a>
+                    </p>
+                </section>
+            </div>
+
+            <!-- Other sections (Tennis, Music, etc.) will follow a similar structure -->
+
+            <!-- Feedback button (stays visible) -->
             <div class="actions">
                 <button class="action-button">Give me anonymous feedback 🧑‍💻</button>
             </div>
