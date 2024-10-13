@@ -5,116 +5,65 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #fafafa;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    flex: 1;
-}
-
-/* Header */
-.main-header {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.main-header h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #2c3e50;
-}
-
-/* Profile Section */
-.profile {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 40px 0;
+    justify-content: center;
+    background-color: #fafafa;
 }
 
-.profile-info {
-    flex: 1;
+/* Home Screen */
+.home-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #34495e;
 }
 
-.profile-info h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #34495e;
-    margin-bottom: 10px;
+.button-container {
+    display: flex;
+    gap: 30px;
 }
 
-.profile-info p {
-    margin-bottom: 10px;
-}
-
-.profile-info .subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #95a5a6;
-}
-
-.btn-contact {
-    display: inline-block;
-    padding: 10px 20px;
+.category-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
     background-color: #3498db;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-button:hover {
+    transform: scale(1.1);
+    background-color: #2980b9;
+}
+
+/* Sections */
+.section {
+    display: none;
+    text-align: center;
+    padding: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    font-weight: 500;
 }
 
-.btn-contact:hover {
-    background-color: #2980b9;
-}
-
-.profile-image {
-    flex: 0.5;
-}
-
-.profile-image img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-/* Skills Section */
-.skills {
-    margin-top: 40px;
-}
-
-.skills h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.skills ul {
-    list-style-type: none;
-}
-
-.skills ul li {
-    font-size: 1.2rem;
-    padding: 10px 0;
-    color: #34495e;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f4f4f4;
-    color: #777;
+.back-button:hover {
+    background-color: #c0392b;
 }

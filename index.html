@@ -3,42 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef Baccouche</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <title>Youssef Baccouche's Website</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="main-header">
-            <h1>Simple Portfolio Website Template</h1>
-        </header>
-
-        <section class="profile">
-            <div class="profile-info">
-                <h2>Hi, I am Youssef Baccouche</h2>
-                <p class="subtitle">AI Engineer</p>
-                <p>5+ Years of Experience</p>
-                <p>Passionate about computer vision AI research and web development.</p>
-                <a href="#contact" class="btn-contact">Contact Me</a>
-            </div>
-            <div class="profile-image">
-                <img src="imgs/profile-pic.svg" alt="Profile Image">
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2>Skill Sets</h2>
-            <ul>
-                <li>Programming Languages & Technologies</li>
-                <li>AI & Machine Learning</li>
-                <li>Web Development</li>
-                <li>Database Management</li>
-            </ul>
-        </section>
+    <div class="home-screen">
+        <div class="button-container">
+            <button class="category-button" onclick="goToSection('ai')">AI</button>
+            <button class="category-button" onclick="goToSection('tennis')">Tennis</button>
+            <button class="category-button" onclick="goToSection('mixing')">Mixing</button>
+            <button class="category-button" onclick="goToSection('travel')">Travel</button>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Youssef Baccouche. All rights reserved.</p>
-    </footer>
+    <div id="ai-section" class="section hidden">
+        <h1>AI</h1>
+        <p>Content about AI and computer vision.</p>
+        <button class="back-button" onclick="goHome()">Back to Home</button>
+    </div>
+
+    <div id="tennis-section" class="section hidden">
+        <h1>Tennis</h1>
+        <p>Details about tennis and my experiences.</p>
+        <button class="back-button" onclick="goHome()">Back to Home</button>
+    </div>
+
+    <!-- Similar sections for Mixing and Travel -->
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
